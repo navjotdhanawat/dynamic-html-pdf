@@ -1,0 +1,31 @@
+{
+  "name": "dynamic-html-pdf",
+  "version": "0.0.1",
+  "description": "Create dynamic PDF from Handlebar template",
+  "main": "index.js",
+  "scripts": {},
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [],
+  "author": "Navjot Dhanawat <navjotdhanawat@gmail.com> (http://www.navjotdhanawat.com/)",
+  "licenses": [
+    {
+      "type": "MIT",
+      "url": ""
+    }
+  ],
+  "bugs": {
+    "url": "https://github.com/navjotdhanawat/dynamic-html-pdf/issues"
+  },
+  "devDependencies": {
+    "mocha": "~1.16.2",
+    "chai": "~1.8.1"
+  },
+  "dependencies": {
+    "handlebars": "4.0.5",
+    "html-pdf": "2.1.0",
+    "lodash.defaults": "4.2.0"
+  }
+}
