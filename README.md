@@ -24,7 +24,7 @@ How to use Dynamic HTML to PDF
 
 ```
 var fs = require('fs');
-var pdf = require('dynamic-handlebars-pdf');
+var pdf = require('dynamic-html-pdf');
 var html = fs.readFileSync('template.html', 'utf8');
 
 
