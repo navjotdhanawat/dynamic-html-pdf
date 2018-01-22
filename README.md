@@ -1,17 +1,20 @@
-# How to Setup: Dynamic handlebars html pdf to create dynamic content html to pdf.
+## How to Setup: Dynamic handlebars html pdf to create dynamic content html to pdf.
+
+#### Installation
 
 ```
 npm install dynamic-html-pdf --save
 
 ```
-template.html
+#### Create template.html
+
 ```
 <html>
     <head>
         Dynamic HTML to PDF
     </head>
     <body>
-        <h1>Hi {{user}}</h1>
+        <h1>Hi {{users[0].name}}</h1>
         <div>
             template
         </div>
@@ -19,8 +22,20 @@ template.html
 </html>
 
 ```
+#### Feel free to use handlebar syntax: [Handlebar builtin helpers](http://handlebarsjs.com/builtin_helpers.html)
 
-How to use Dynamic HTML to PDF
+For example:
+```
+<ul>
+  {{#each users}}
+    <li>Name: {{this.name}}</li>
+    <li>Age: {{this.age}}</li>
+    <li>DOB: {{this.dob}}</li>
+  {{/each}}
+</ul>
+```
+
+#### How to use Dynamic HTML to PDF
 
 ```
 var fs = require('fs');
@@ -34,10 +49,28 @@ var options = {
     border: "10mm"
 };
 
+var users = [
+    {
+        name: 'aaa',
+        age: 24,
+        dob: '1/1/1991'
+    },
+    {
+        name: 'bbb',
+        age: 25,
+        dob: '1/1/1995'
+    },
+    {
+        name: 'ccc',
+        age: 24,
+        dob: '1/1/1994'
+    }
+];
+
 var document = {
     template: html,
     context: {
-        user: 'User'
+        users: users
     },
     path: "./output.pdf"
 };
@@ -50,3 +83,5 @@ pdf.create(document, options)
         console.error(error)
     });
 ```
+
+[For detailed Tutorial follow this link](http://www.thenextfact.com/convert-html-pdf-node-js-express-js-using-dynamic-html-pdf-3-steps/)

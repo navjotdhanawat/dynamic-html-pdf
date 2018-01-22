@@ -13,7 +13,7 @@
   "licenses": [
     {
       "type": "MIT",
-      "url": ""
+      "url": "https://github.com/navjotdhanawat/dynamic-html-pdf"
     }
   ],
   "bugs": {
@@ -24,8 +24,8 @@
     "chai": "~1.8.1"
   },
   "dependencies": {
-    "handlebars": "4.0.5",
-    "html-pdf": "2.1.0",
+    "handlebars": "4.0.11",
+    "html-pdf": "2.2.0",
     "lodash.defaults": "4.2.0"
   }
 }
