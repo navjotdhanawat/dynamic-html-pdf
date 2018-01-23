@@ -68,11 +68,12 @@ var users = [
 ];
 
 var document = {
+    type: 'buffer',     // 'file' or 'buffer'
     template: html,
     context: {
         users: users
     },
-    path: "./output.pdf"
+    path: "./output.pdf"    // it is not required if type is buffer
 };
 
 pdf.create(document, options)

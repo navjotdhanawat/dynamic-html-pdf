@@ -1,12 +1,12 @@
 {
   "name": "dynamic-html-pdf",
-  "version": "0.0.3",
+  "version": "0.0.4",
   "description": "Create dynamic PDF from Handlebar template",
   "main": "index.js",
   "scripts": {},
   "repository": {
     "type": "git",
-    "url": ""
+    "url": "https://github.com/navjotdhanawat/dynamic-html-pdf"
   },
   "keywords": [],
   "author": "Navjot Dhanawat <navjotdhanawat@gmail.com> (http://www.navjotdhanawat.com/)",
