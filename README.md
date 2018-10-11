@@ -14,7 +14,7 @@ npm install dynamic-html-pdf --save
         Dynamic HTML to PDF
     </head>
     <body>
-        <h1>Hi {{users[0].name}}</h1>
+        <h1>Hi {{users.0.name}}</h1>
         <div>
             template
         </div>
