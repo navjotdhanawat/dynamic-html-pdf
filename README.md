@@ -17,6 +17,11 @@ npm install dynamic-html-pdf --save
         <h1>Hi {{users.0.name}}</h1>
         <div>
             template
+            {{#ifCond 'v1' 'v2'}}
+                {{v1}} is equals to {{v2}}
+            {{else}}
+                Variables are not similar
+            {{/ifCond}}
         </div>
     </body>
 </html>
@@ -35,6 +40,30 @@ For example:
 </ul>
 ```
 
+#### [Custom handlebar helpers](https://handlebarsjs.com/block_helpers.html)
+For example:
+Register helper inside js file:
+```
+// Custom If condition inside handlebar(JS file)
+var pdf = require('dynamic-html-pdf');
+pdf.registerHelper('ifCond', function (v1, v2, options) {
+    if (v1 === v2) {
+        return options.fn(this);
+    }
+    return options.inverse(this);
+})
+```
+
+Utilize registered helper inside handlebar template:
+```
+{{#ifCond v1 v2}}
+    {{v1}} is equals to {{v2}}
+{{else}}
+    Variables are not similar
+{{/ifCond}}
+```
+
+
 #### How to use Dynamic HTML to PDF
 
 ```
@@ -42,6 +71,13 @@ var fs = require('fs');
 var pdf = require('dynamic-html-pdf');
 var html = fs.readFileSync('template.html', 'utf8');
 
+// Custom handlebar helper
+pdf.registerHelper('ifCond', function (v1, v2, options) {
+    if (v1 === v2) {
+        return options.fn(this);
+    }
+    return options.inverse(this);
+})
 
 var options = {
     format: "A3",

@@ -15,7 +15,11 @@
 var Handlebars = require('handlebars'),
     pdf = require('html-pdf');
 
-module.exports = {};
+// Handlebar helper support
+module.exports.registerHelper = (conditionName, callback) => {
+    Handlebars.registerHelper(conditionName, callback);
+};
+
 module.exports.create = (document, options) => {
     // Compile handlebar template
     return new Promise((resolve, reject) => {
