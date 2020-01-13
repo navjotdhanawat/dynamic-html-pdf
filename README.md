@@ -120,5 +120,3 @@ pdf.create(document, options)
         console.error(error)
     });
 ```
-
-[For detailed Tutorial follow this link](http://www.thenextfact.com/convert-html-pdf-node-js-express-js-using-dynamic-html-pdf-3-steps/)
