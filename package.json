@@ -1,6 +1,6 @@
 {
   "name": "dynamic-html-pdf",
-  "version": "1.0.3",
+  "version": "1.0.4",
   "description": "Create dynamic PDF from Handlebar template",
   "main": "index.js",
   "scripts": {},
@@ -24,7 +24,7 @@
     "chai": "~1.8.1"
   },
   "dependencies": {
-    "handlebars": "4.7.6",
+    "handlebars": "4.7.7",
     "html-pdf": "3.0.1"
   }
 }
